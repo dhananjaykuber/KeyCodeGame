@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+        body {
+            background: rgb(238, 238, 238);
+        }
+
+        #container {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: "Poppins";
+        }
+
+        #keyCode {
+            font-size: 200px;
+            margin: 0px;
+        }
+
+        #keyChar,
+        #charTitle,
+        #nameTitle,
+        #keyName {
+            font-size: 32px;
+            margin: 0px;
+        }
+
+        #charTitle,
+        #nameTitle {
+            color: red;
+        }
+
+        .innerContainer {
+            display: flex;
+            font-style: italic;
+        }
+    </style>
+
+    <title>Key Code Game</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="startGame" style="text-decoration: underline;"></h1>
+
+        <h1 id="keyCode"></h1>
+
+        <div class="innerContainer">
+            <h3 id="charTitle"></h3>
+            <h3 id="keyChar"></h3>
+        </div>
+
+        <div class="innerContainer">
+            <h3 id="nameTitle"></h3>
+            <h3 id="keyName"></h3>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("startGame").innerHTML = "Press any key to start game!"
+
+    function printKey(e) {
+        document.getElementById("startGame").innerHTML = ""
+
+        document.getElementById("charTitle").innerHTML = "Key:&nbsp;";
+        document.getElementById("nameTitle").innerHTML = "KeyName:&nbsp;";
+
+        document.getElementById("keyCode").innerHTML = e.keyCode;
+        document.getElementById("keyChar").innerHTML = e.key;
+        document.getElementById("keyName").innerHTML = e.code;
+    }
+
+    window.addEventListener("keydown", printKey);
+</script>
+
+</html>
