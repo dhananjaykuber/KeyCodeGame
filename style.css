@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+body {
+  background: rgb(238, 238, 238);
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins";
+}
+
+#keyCode {
+  font-size: 200px;
+  margin: 0px;
+}
+
+.keyData {
+  font-size: 32px;
+  margin: 0px;
+}
+
+.keyData:nth-child(odd) {
+  color: red;
+}
+
+.innerContainer {
+  display: flex;
+  font-style: italic;
+}
